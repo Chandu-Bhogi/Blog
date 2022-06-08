@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .random {
+            width:1600px;
+            margin:auto;
+            text-align:center;
+            box-sizing:border-box;
+            background-color:#FFEBCD;
+            border:2px solid black;
+            font-family: 'Alegreya SC';font-size: 30px;
+        }
+        </style>
+</head>
+<body>
+<header class="header">
+    <a href="#" class="logo"><img src="images/1.jpg" alt="" width="10%"></a>
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#posts">Blogs</a>
+        <a href="#contact">Reach Us</a>
+        <a href="#write">Create Blog</a>
+    </nav>
+    <form action="" class="search-form">
+        <input type="search" name="" placeholder="search here..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+    <style>
+        .first-txt {
+            position:relative;
+            top:-200px;
+            left:-70px;
+            color: #700;
+
+        }
+    </style>
+</header>
+
+<div class="random">
+    <img src="./images/2.jpg" width="1600" height="700">
+    <h1  class="first-txt"><b>VELOCITY</b><br></h1>
+    </div>
+<section class="container" id="posts">
+    <div class="posts-container">
+        <div class="post">
+            <img src="./images/7.jpg" alt="" class="image">
+            <div class="date">
+                <i class="far fa-clock"></i>
+                <span>01-08-2003</span>
+            </div>
+            <h3 class="title"><h1 style="font-size: 30px;"><b>Newsletter-Revolution</b></h1>
+            <p class="text">Wipro Innovation Day</p>
+            <p class="text"></p>
+            <div class="links">
+                <a href="#" class="user">
+                    <i class="far fa-user"></i>
+                    <span >Chandu</span>
+                </a>
+                <a href="#" class="icon">
+                    <i class="far fa-comment"></i>
+                    <span>(11)</span>
+                </a>
+            </div>
+        </div>
+        <div class="post">
+            <img src="./images/8.jpg" alt="" class="image">
+            <div class="date">
+                <i class="far fa-clock"></i>
+                <span>11-11-2013</span>
+            </div>
+            <h3 class="title"><h1 style="font-size: 30px;"><b>Newsletter-Health Herald</b></h1>
+            <p class="text"></p>
+            <p class="text"></p>
+            <div class="links">
+                <a href="#" class="user">
+                    <i class="far fa-user"></i>
+                    <span>Chandu</span>
+                </a>
+                <a href="#" class="icon">
+                    <i class="far fa-comment"></i>
+                    <span>(11)</span>
+                </a>
+            </div>
+        </div>
+       
+        <div class="post">
+            <img src="./images/8.jpg" alt="" class="image">
+            <div class="date">
+                <i class="far fa-clock"></i>
+                <span>11-11-2013</span>
+            </div>
+            <h3 class="title" ><h1 style="font-size: 30px;" id="nm"><b id="d2"></b></h1>
+            <p class="text" id="ct"></p>
+            <p class="text" id="des"></p>
+            <div class="links">
+                <a href="#" class="user">
+                    <i class="far fa-user"></i>
+                    <span>Chandu</span>
+                </a>
+                <a href="#" class="icon">
+                    <i class="far fa-comment"></i>
+                    <span>(11)</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar"><!--
+        <div class="box">
+            <h3 class="title">Best Blogs</h3>
+            <div class="category">
+                <a href="#"> BLOG 1</a>
+            </div>
+        </div>
+        <div class="box">
+            <h3 class="title">Blogs Include</h3>
+            <div class="tags">
+                <a href="#">CHANDU</a>
+                <a href="#">B.CHANDU</a>
+                <a href="#">BHOGI CHANDU</a>
+                
+            </div>
+        </div>  -->
+    </div>
+    <script>
+        function getParams(){
+            var idx = document.URL.indexOf('?');
+            var params = new Array();
+            if (idx != -1) {
+                var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+                for (var i=0; i<pairs.length; i++){
+                    nameVal = pairs[i].split('=');
+                    params[nameVal[0]] = nameVal[1];
+                }
+            }
+            return params;
+        }
+        params = getParams();
+        Name = unescape(params["Name"]);
+        Category= unescape(params["Category"]);
+        Ds = unescape(params["blog"]);
+        document.getElementById("nm").innerHTML= Name + "<br>";
+        document.getElementById("ct").innerHTML= Category+ "<br>";
+        document.getElementById("des").innerHTML = Ds+ "<br>";
+    </script>
+</section>
+<br>
+<br>
+<section class="contact" id="contact">
+    <form>
+        <table>
+            <tr>
+                <center><h1 style="font-size:30px;"> Reach Us </b></h1></center>
+                <td>Name:</td>
+                <td><input type=text name="Name" size=15></td>
+            </tr>
+            <tr>
+                <td>email id:</td>
+                <td><input type=email name="email" size=15></td>
+            </tr>
+            <tr>
+                <td>phone number:</td>
+                <td><input type=number name="number" size=15></td>
+            </tr>
+            </table>
+            <table>
+            <tr>
+                <h1><b>Message:</b></h1>
+                <td><textarea rows = "10" cols = "40" name = "message"></textarea></td>
+            </tr>
+        </table>
+        <input type="submit"value="submit">
+    </form>
+<section class="footer">
+
+        <div class="follow">
+            <a href="https://www.instagram.com/wiprolimited/?hl=en" class="fab fa-instagram"></a> &nbsp;&nbsp;
+            <a href="https://www.facebook.com/WiproLimited/" class="fab fa-facebook"></a> &nbsp;
+            <a href="https://twitter.com/Wipro?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="fab fa-twitter"></a>
+        </div>
+    </section>
+<section id="write">
+    
+        <form method="get" action="">
+            <table>
+                <center><h1 style="font-size:50px;"> Post Your Blog </b></h1></center>
+                <center><h2 style="font-size:15px;">Create and post the blogs for the benefit of the customers</h2></center>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type=text name="Name" size=20></td>
+                </tr>
+                <tr>
+                    <td>category:</td>
+                    <td><input type=text name="Category" size=15></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <h1><b>Brief Description:</b></h1>
+                    <body style="background-color:rgb(254, 186, 130);"></body>
+                    <td><textarea rows = "14" cols = "80" name = "blog"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan=2><input type=submit value="Publish">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+        </section>
+       
+        <script src="./script.js"></script>
+        
+</body>
+</html>
